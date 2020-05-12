@@ -46,10 +46,9 @@ public class RollerAgent : Agent
         sensor.AddObservation(rb.velocity.z);
     }
 
-    public float speed = 10;
+    public float speed;
     public override void OnActionReceived(float[] action)
-    {  
-        //AddReward(-1f / MaxStep);
+    {          
         moveAgent(action);
 
         // Fell off platform
